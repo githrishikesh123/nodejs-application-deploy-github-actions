@@ -8,6 +8,11 @@ app.get("/", (req,res)=>{
         message: "Hello World"
     });
 })
+app.get("/health", (req,res)=>{
+    res.json({
+        message: "Health check passed"
+    });
+})
 
 app.listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`);
